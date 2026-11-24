@@ -1,0 +1,778 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SR Deutsch</title>
+<meta name="description" content="SR Deutsch: German conversation courses and exam preparation for Goethe and telc. Private lessons and small groups, online worldwide, taught by Sohaila Ragab.">
+<meta name="theme-color" content="#F7FAFD">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'%3E%3Ccircle cx='12' cy='12' r='12' fill='%233567D0'/%3E%3Crect x='18' y='18' width='18' height='18' rx='4' fill='%239DBBEF'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&family=Inter:wght@400;500;600&family=Instrument+Serif:ital@1&display=swap">
+<style>
+/* Layout concept: calm, airy and clean. One mid-blue accent in several tints; conversation = light tint, academic = deep blue. */
+:root{
+  --paper:#F7FAFD; --mist:#EEF4FC; --white:#FFFFFF;
+  --ink:#16233F; --soft:#54627E; --line:#DCE5F2; --bd:#C9D6EA;
+  --blue:#3567D0; --blue-deep:#1F3F86; --tint:#E4EDFB; --tint-2:#CFDDF6; --mid:#9DBBEF;
+  --sun:#CFDDF6; --coral:#9DBBEF; --coral-soft:#E4EDFB;
+  --navy:#172B57; --navy-2:#20386F; --on-navy:#C9D6F0;
+  --shadow:0 10px 30px rgba(22,35,63,.08);
+  --disp:'Plus Jakarta Sans','Segoe UI',system-ui,sans-serif;
+  --serif:'Instrument Serif','Georgia',serif;
+  --body:Inter,system-ui,-apple-system,'Segoe UI',sans-serif;
+  --mono:var(--body);
+  --gutter-l:max(20px,env(safe-area-inset-left,0px));
+  --gutter-r:max(20px,env(safe-area-inset-right,0px));
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 var(--body);-webkit-text-size-adjust:100%;overflow-x:hidden}
+img{max-width:100%}
+a{color:inherit}
+h1,h2,h3,h4{margin:0;font-family:var(--disp);font-weight:700;letter-spacing:-.025em;text-wrap:balance}
+p{margin:0}
+em.it{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:0}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px;box-shadow:0 0 0 6px var(--tint-2)}
+.wrap{max-width:1160px;margin:0 auto;padding:0 var(--gutter-r) 0 var(--gutter-l)}
+.sec{padding-block:96px}
+@media (max-width:640px){.sec{padding-block:64px}}
+.tag{display:inline-flex;align-items:center;gap:10px;font:600 13px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--blue)}
+.tag b{display:inline-grid;place-items:center;min-width:34px;height:26px;padding:0 8px;border-radius:99px;background:var(--blue);color:#fff;font-weight:600}
+h2{font-size:clamp(36px,5vw,64px);line-height:1.02}
+.lead{font-size:19px;max-width:60ch;color:var(--soft)}
+.head{display:flex;flex-direction:column;gap:18px;margin-bottom:48px}
+
+/* buttons: pill with arrow, offset shadow, press on hover */
+.btn{--bg:var(--blue);--fg:#fff;display:inline-flex;align-items:center;gap:14px;min-height:54px;padding:6px 8px 6px 26px;border:0;border-radius:99px;background:var(--bg);color:var(--fg);text-decoration:none;font:600 16px var(--body);box-shadow:0 8px 20px rgba(53,103,208,.28);cursor:pointer;transition:transform .15s ease,box-shadow .15s ease,background .15s ease}
+.btn .arr{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:#fff;color:var(--blue);font-size:19px;line-height:1;transition:transform .2s ease}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(22,35,63,.16)}
+.btn:hover .arr{transform:translateX(3px)}
+.btn:active{transform:translateY(0)}
+.btn.white{--bg:#fff;--fg:var(--ink);border:1px solid var(--bd);box-shadow:0 6px 18px rgba(22,35,63,.08)}
+.btn.white .arr{background:var(--ink);color:#fff}
+.btn.sm{min-height:46px;padding:4px 6px 4px 20px;font-size:15px}
+.btn.sm .arr{width:34px;height:34px;font-size:16px}
+.btn.on-navy{--bg:#fff;--fg:var(--ink);box-shadow:none}
+.btn.on-navy .arr{background:var(--blue);color:#fff}
+.btn.on-navy:hover{box-shadow:0 10px 22px rgba(0,0,0,.25)}
+@media (prefers-reduced-motion:reduce){.btn,.btn .arr{transition:none}.btn:hover{transform:none}.btn:hover .arr{transform:none}html{scroll-behavior:auto}}
+
+/* header */
+header{position:sticky;top:0;z-index:30;background:rgba(247,250,253,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+.nav{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px 24px;padding-block:10px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo svg{width:38px;height:38px;flex:none}
+.logo span{font:700 24px var(--disp);letter-spacing:-.02em}
+.logo span i{font-style:normal;font-weight:500}
+.nav nav{display:flex;flex-wrap:wrap;align-items:center;gap:0 22px}
+.nav nav a.l{text-decoration:none;font-weight:500;font-size:15px;padding:10px 0;border-bottom:2px solid transparent}
+.nav nav a.l:hover{border-bottom-color:var(--blue)}
+@media (max-width:860px){.nav nav a.l.hide-sm{display:none}}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding-block:64px 88px}
+.hero .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:48px}
+.hero-copy{flex:1 1 480px;min-width:0;display:flex;flex-direction:column;gap:28px}
+.hello{align-self:flex-start;display:inline-flex;align-items:center;gap:10px;padding:8px 16px 8px 10px;border:1px solid var(--bd);border-radius:99px;background:#fff;font:500 14px var(--mono)}
+.hello i{width:12px;height:12px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 4px var(--tint-2)}
+h1{font-size:clamp(46px,7vw,98px);line-height:.96}
+h1 em.it{color:var(--blue);font-size:1.08em}
+.hero-sub{font-size:20px;max-width:52ch;color:var(--soft)}
+.cta{display:flex;flex-wrap:wrap;gap:18px 22px;padding:0 6px 8px 0}
+.trust{display:flex;flex-wrap:wrap;gap:8px 22px;font:500 14px var(--mono);color:var(--soft)}
+.trust span::before{content:"";display:inline-block;width:8px;height:8px;margin-right:9px;background:var(--blue);border-radius:50%;vertical-align:1px}
+
+.collage{flex:1 1 380px;min-width:0;position:relative;aspect-ratio:1/1;max-width:520px;margin-inline:auto}
+.blob{position:absolute}
+.blob.b1{inset:6% 4% 8% 14%;background:var(--tint-2);border-radius:48% 52% 44% 56%/52% 44% 56% 48%}
+.blob.b2{left:0;top:14%;width:30%;aspect-ratio:1;background:var(--mid);border-radius:50%}
+.blob.b3{right:2%;bottom:0;width:26%;aspect-ratio:1;background:var(--blue);border-radius:28% 72% 70% 30%/30% 30% 70% 70%}
+.bubble{position:absolute;max-width:62%;padding:14px 18px;border:1px solid var(--bd);background:#fff;font:700 clamp(18px,2.6vw,25px)/1.2 var(--disp);letter-spacing:-.015em;box-shadow:0 14px 30px rgba(22,35,63,.14)}
+.bubble small{display:block;margin-top:6px;font:400 12px var(--mono);letter-spacing:0;color:var(--soft)}
+.bubble.q1{left:0;top:6%;border-radius:22px 22px 22px 4px}
+.bubble.q2{right:0;top:34%;border-radius:22px 22px 4px 22px}
+.bubble.q3{left:10%;bottom:12%;border-radius:22px 22px 22px 4px;background:var(--blue);color:#fff}
+.bubble.q3 small{color:var(--tint-2)}
+.stamp{position:absolute;right:6%;top:2%;display:grid;place-items:center;width:104px;height:104px;border-radius:50%;background:var(--navy);color:#fff;font:700 21px/1 var(--disp);text-align:center;transform:rotate(12deg);box-shadow:0 10px 24px rgba(22,35,63,.25)}
+.stamp small{display:block;margin-top:4px;font:400 10px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--mid)}
+@media (prefers-reduced-motion:no-preference){
+  .bubble.q1{animation:bob 6s ease-in-out infinite}
+  .bubble.q2{animation:bob 7s ease-in-out -2s infinite}
+  .bubble.q3{animation:bob 8s ease-in-out -4s infinite}
+  .stamp{animation:spin 18s linear infinite}
+}
+@keyframes bob{50%{transform:translateY(-8px)}}
+@keyframes spin{to{transform:rotate(372deg)}}
+
+/* marquee */
+.marquee{background:var(--navy);color:#fff;overflow:hidden;white-space:nowrap}
+.marquee-track{display:inline-flex;gap:0;padding:16px 0;animation:slide 40s linear infinite}
+.marquee-track span{font:600 24px var(--disp);letter-spacing:-.01em;padding:0 22px}
+.marquee-track span:nth-child(even){font:400 28px var(--serif);font-style:italic;color:var(--mid)}
+.marquee-track i{font-style:normal;color:var(--mid);padding:0 4px}
+@keyframes slide{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.marquee-track{animation:none}.marquee{overflow-x:auto}}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px}
+.stat{background:#fff;border:1px solid var(--bd);border-radius:22px;padding:24px;box-shadow:var(--shadow)}
+.stat b{display:block;font:700 clamp(44px,5vw,64px)/1 var(--disp);letter-spacing:-.03em}
+.stat b{color:var(--blue)}
+.stat span{display:block;margin-top:6px;font-size:15px;color:var(--soft)}
+
+/* paths */
+.paths{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:32px;padding:0 8px 8px 0}
+.path{position:relative;display:flex;flex-direction:column;gap:20px;padding:36px;border:1px solid var(--bd);border-radius:30px;box-shadow:var(--shadow);overflow:hidden;min-width:0}
+.path.conv{background:var(--tint)}
+.path.acad{background:var(--navy);color:#fff}
+.path .big{font:700 clamp(34px,4vw,52px)/1 var(--disp)}
+.path .big em.it{font-size:1.1em}
+.path.conv .big em.it{color:var(--blue)}
+.path.acad .big em.it{color:var(--mid)}
+.path p.d{font-size:18px}
+.path.acad p.d{color:var(--on-navy)}
+.path ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.path li{display:flex;gap:12px;align-items:flex-start}
+.path li::before{content:"";flex:none;width:11px;height:11px;margin-top:9px;border:2px solid currentColor;border-radius:50%}
+.path .acts{display:flex;flex-wrap:wrap;gap:14px 18px;margin-top:auto;padding:6px 6px 4px 0}
+.path .mono-note{font:500 12px var(--mono);letter-spacing:.06em;text-transform:uppercase;opacity:.85}
+
+/* detail corners */
+.corner{position:relative}
+.corner.conv{background:var(--tint)}
+.corner.acad{background:var(--navy);color:#fff}
+.corner .head p.lead{color:inherit;opacity:.82}
+.corner h2 em.it{font-size:1.08em}
+.corner.conv h2 em.it{color:var(--blue)}
+.corner.acad h2 em.it{color:var(--mid)}
+.corner .tag b{background:var(--blue);color:#fff}
+.corner.acad .tag b{background:var(--blue);color:#fff}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:20px;margin-bottom:44px}
+.fact{display:flex;flex-direction:column;gap:10px;padding:26px;border:1px solid var(--bd);border-radius:24px;background:#fff;color:var(--ink);box-shadow:var(--shadow);min-width:0}
+.fact .n{display:inline-grid;place-items:center;width:44px;height:44px;border-radius:14px;background:var(--tint);color:var(--blue);font:700 19px var(--disp)}
+.fact h3{font-size:22px;line-height:1.1}
+.fact p{font-size:16px;color:var(--soft)}
+.corner.acad .fact{border-color:rgba(255,255,255,.22);box-shadow:none;background:var(--navy-2);color:#fff}
+.corner.acad .fact p{color:var(--on-navy)}
+.corner.acad .fact .n{background:var(--blue);color:#fff;border-color:#fff}
+.two{display:flex;flex-wrap:wrap;gap:32px;align-items:stretch}
+.two>*{flex:1 1 440px;min-width:0}
+.panel{background:#fff;color:var(--ink);border:1px solid var(--bd);border-radius:28px;padding:32px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:18px}
+.corner.acad .panel{background:var(--navy-2);color:#fff;border-color:rgba(255,255,255,.22);box-shadow:none}
+.panel h3{font-size:28px;line-height:1.05}
+.panel .sub{font:500 12px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--soft)}
+.corner.acad .panel .sub{color:var(--mid)}
+.flow{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.flow li{display:flex;gap:16px;padding:14px 0;border-top:1px solid var(--line)}
+.flow li:first-child{border-top:0;padding-top:0}
+.flow time{flex:0 0 74px;font:600 13px var(--mono);color:var(--blue);padding-top:4px}
+.corner.acad .flow li{border-top-color:#2A3C78}
+.corner.acad .flow time{color:var(--mid)}
+.flow b{display:block;font:700 18px var(--disp)}
+.flow span{font-size:15px;color:var(--soft)}
+.corner.acad .flow span{color:var(--on-navy)}
+.fmt-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:16px}
+.fmt{display:flex;flex-direction:column;gap:12px;padding:20px;border:1px solid var(--bd);border-radius:20px;background:var(--paper);min-width:0}
+.corner.acad .fmt{background:var(--navy);border-color:#fff}
+.fmt h4{font-size:22px}
+.fmt p{font-size:15px;color:var(--soft)}
+.corner.acad .fmt p{color:var(--on-navy)}
+.fmt .price{font:500 14px var(--mono)}
+.fmt .btn{align-self:flex-start;margin:4px 4px 4px 0}
+.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.skills div{padding:16px;border:1px solid rgba(255,255,255,.22);border-radius:16px;background:var(--navy);min-width:0}
+.skills b{display:block;font:700 19px var(--disp);color:var(--mid)}
+.skills span{font-size:14px;color:var(--on-navy)}
+.skills .focus{background:var(--blue)}
+.skills .focus b,.skills .focus span{color:#fff}
+.disclaimer{margin-top:8px;padding:16px 18px;border:1px dashed var(--mid);border-radius:16px;font-size:14px;line-height:1.5;color:var(--on-navy)}
+.cta-band{margin-top:48px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px 32px;padding:28px 32px;border:1px solid var(--bd);border-radius:28px;background:var(--tint-2);color:var(--ink);box-shadow:none;border:0}
+.cta-band h3{font-size:clamp(24px,3vw,34px);line-height:1.05;flex:1 1 280px;min-width:0}
+.corner.acad .cta-band{background:var(--blue);color:#fff}
+.cta-band .row{display:flex;flex-wrap:wrap;gap:14px 18px;padding:0 6px 6px 0}
+
+/* assessment */
+.assess{background:var(--tint)}
+.assess .head p.lead{color:var(--ink);opacity:.82}
+.crit{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:20px}
+.crit .box{background:#fff;border:1px solid var(--bd);border-radius:24px;padding:26px;box-shadow:var(--shadow);min-width:0}
+.crit h3{font-size:24px;margin-bottom:12px}
+.crit ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.crit li{display:flex;gap:10px;align-items:flex-start;font-size:16px}
+.crit li::before{content:"✓";flex:none;display:grid;place-items:center;width:22px;height:22px;margin-top:2px;border-radius:50%;background:var(--blue);color:#fff;font-size:13px;font-weight:700}
+.leave{margin-top:36px;display:flex;flex-wrap:wrap;align-items:center;gap:22px 32px;padding:28px 32px;background:var(--navy);color:#fff;border-radius:28px}
+.leave h3{font-size:28px;flex:1 1 200px;min-width:0}
+.leave ul{flex:3 1 360px;min-width:0;list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:12px 28px}
+.leave li{flex:1 1 200px;min-width:0;display:flex;gap:12px;align-items:flex-start}
+.leave li::before{content:"";flex:none;width:10px;height:10px;margin-top:9px;background:var(--mid);border-radius:50%}
+.leave .row{padding:0 6px 6px 0}
+
+/* levels */
+.ladder{display:flex;flex-wrap:wrap;align-items:flex-end;gap:14px}
+.rung{flex:1 1 170px;min-width:0;display:flex;flex-direction:column;justify-content:space-between;gap:18px;padding:22px;border:1px solid var(--bd);border-radius:24px}
+.rung .c{font:700 52px/1 var(--disp);letter-spacing:-.03em}
+.rung b{display:block;font:700 18px var(--disp)}
+.rung span{display:block;margin-top:4px;font-size:14px;line-height:1.5}
+.rung.a{background:#fff;min-height:240px}.rung.a2{background:#fff;min-height:290px}
+.rung.b{background:var(--tint-2);min-height:340px}.rung.b2{background:var(--mid);min-height:390px}
+.rung.c1{background:var(--blue);color:#fff;min-height:440px}
+.rung.a span,.rung.a2 span{color:var(--soft)}
+
+/* compare */
+.compare{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:28px;padding:0 8px 8px 0}
+.cmp{padding:34px;border:1px solid var(--bd);border-radius:28px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:18px;min-width:0}
+.cmp.p{background:var(--blue);color:#fff}
+.cmp.g{background:#fff}
+.cmp h3{font-size:36px}
+.cmp .mono-note{font:500 12px var(--mono);letter-spacing:.06em;text-transform:uppercase}
+.cmp.p .mono-note{color:var(--tint-2)}
+.cmp dl{margin:0;display:flex;flex-direction:column}
+.cmp dl div{display:flex;flex-wrap:wrap;gap:4px 16px;padding:13px 0;border-top:1px solid color-mix(in srgb,currentColor 25%,transparent)}
+.cmp dt{flex:0 0 96px;font:500 12px var(--mono);letter-spacing:.06em;text-transform:uppercase;opacity:.75;padding-top:3px}
+.cmp dd{margin:0;flex:1 1 180px;min-width:0}
+
+/* about */
+.about{display:flex;flex-wrap:wrap;gap:56px;align-items:flex-start}
+.photo-col{flex:1 1 320px;min-width:0;padding:0 8px 8px 0}
+.photo{position:relative;width:100%;max-width:440px;aspect-ratio:4/5;margin-inline:auto;border:1px solid var(--bd);border-radius:36px 36px 120px 36px;background:var(--blue);box-shadow:var(--shadow);overflow:hidden}
+.photo i{position:absolute;left:-14%;bottom:-14%;width:62%;aspect-ratio:1;border-radius:50%;background:var(--tint-2)}
+.photo u{position:absolute;right:8%;top:7%;width:22%;aspect-ratio:1;border-radius:30% 70% 70% 30%/30% 30% 70% 70%;background:var(--mid)}
+.photo span{position:absolute;inset:auto 0 46% 0;text-align:center;font:500 14px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:#fff}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.about-copy{flex:1 1 460px;min-width:0;display:flex;flex-direction:column;gap:22px}
+.about-copy h2 em.it{color:var(--blue)}
+.role{font:700 22px var(--disp);color:var(--blue)}
+.about-copy .lead{max-width:56ch}
+.kv{display:flex;flex-direction:column}
+.kv div{display:flex;flex-wrap:wrap;gap:4px 24px;padding:16px 0;border-top:1px solid var(--line)}
+.kv div:first-child{border-top:1px solid var(--bd)}
+.kv div:last-child{border-bottom:1px solid var(--bd)}
+.kv dt{flex:0 0 130px;font:500 12px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--soft);padding-top:4px}
+.kv dd{margin:0;flex:1 1 240px;min-width:0}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{padding:8px 16px;border:1px solid var(--bd);border-radius:99px;background:#fff;font-weight:500;font-size:15px}
+
+/* faq */
+.faq{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:16px 28px;align-items:start}
+details{border:1px solid var(--bd);border-radius:20px;background:#fff;padding:0 22px}
+details[open]{background:var(--mist)}
+summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 0;font:700 19px/1.25 var(--disp)}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";flex:none;display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--tint);color:var(--blue);font:600 20px/1 var(--body)}
+details[open] summary::after{content:"–"}
+details p{padding:0 0 20px;color:var(--soft)}
+
+/* register */
+.register{background:var(--mist);border-block:1px solid var(--bd)}
+.reg{background:#fff;border:1px solid var(--bd);border-radius:32px;box-shadow:var(--shadow);padding:clamp(22px,4vw,40px);display:flex;flex-direction:column;gap:28px}
+.pick{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:12px}
+.pick label{position:relative;display:flex;flex-direction:column;gap:4px;padding:16px 18px;border:1px solid var(--bd);border-radius:18px;background:var(--paper);cursor:pointer;min-width:0}
+.pick input{position:absolute;opacity:0;inset:0;cursor:pointer}
+.pick b{font:700 17px var(--disp)}
+.pick span{font-size:14px;color:var(--soft)}
+.pick label:has(input:checked){background:var(--tint);border-color:var(--blue);box-shadow:0 0 0 1px var(--blue)}
+.pick label:has(input:focus-visible){outline:3px solid var(--ink);outline-offset:3px}
+.grid{display:flex;flex-wrap:wrap;gap:20px 24px}
+.fld{flex:1 1 260px;min-width:0;display:flex;flex-direction:column;gap:8px}
+.fld.wide{flex-basis:100%}
+.fld>label,.fld>.lbl{font:500 12px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--soft)}
+.fld input,.fld select,.fld textarea{width:100%;min-height:54px;padding:12px 16px;border:1px solid var(--bd);border-radius:16px;background:var(--paper);color:var(--ink);font:400 17px var(--body)}
+.fld textarea{resize:vertical;min-height:96px}
+.reg-actions{display:flex;flex-wrap:wrap;align-items:center;gap:18px 26px}
+.reg-actions .btn{margin:0 6px 6px 0}
+.reg-note{font-size:14px;color:var(--soft);max-width:56ch}
+[hidden]{display:none!important}
+.out{border-top:1px solid var(--bd);padding-top:24px;display:flex;flex-direction:column;gap:16px}
+.out p{font-weight:600}
+.out textarea{width:100%;min-height:190px;padding:14px 16px;border:1px solid var(--bd);border-radius:16px;background:var(--paper);color:var(--ink);font:400 15px/1.5 var(--body)}
+.out .row{display:flex;flex-wrap:wrap;gap:14px 18px;padding:0 6px 6px 0}
+
+
+/* finder */
+.finder{display:flex;flex-wrap:wrap;gap:40px;align-items:stretch}
+.controls{flex:1 1 320px;min-width:0;display:flex;flex-direction:column;gap:30px}
+.group{display:flex;flex-direction:column;gap:12px}
+.group .mono{color:var(--soft)}
+.opts{display:flex;flex-wrap:wrap;gap:10px}
+.opt{min-height:52px;padding:0 22px;border:1px solid var(--bd);border-radius:99px;background:#fff;color:var(--ink);font:600 16px var(--body);cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.opt:hover{border-color:var(--blue)}
+.opt[aria-pressed="true"]{background:var(--blue);border-color:var(--blue);color:#fff}
+.hint{font-size:15px;color:var(--soft)}
+.hint a{color:var(--blue);font-weight:600}
+.result{flex:1 1 460px;min-width:0;background:#fff;border:1px solid var(--bd);border-radius:28px;box-shadow:var(--shadow);padding:clamp(24px,4vw,36px);display:flex;flex-direction:column;gap:16px}
+.result h3{font-size:clamp(26px,3vw,34px);line-height:1.1}
+.result p{color:var(--soft);font-size:17px}
+.result .pts{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.result .pts li{display:flex;gap:12px;align-items:flex-start}
+.result .pts li::before{content:"";flex:none;width:9px;height:9px;margin-top:9px;border-radius:50%;background:var(--blue)}
+.result .meta{display:flex;flex-wrap:wrap;gap:12px 40px;border-top:1px solid var(--line);padding-top:16px}
+.result .meta div{display:flex;flex-direction:column;gap:2px}
+.result .meta .mono{font-size:12px;color:var(--soft)}
+.result .btn{align-self:flex-start;margin:4px 6px 6px 0}
+/* assessment extras */
+.look{display:flex;flex-direction:column;gap:12px;margin-bottom:28px}
+.look .mono{color:var(--soft)}
+.chip.lv{font-weight:700;color:var(--blue);background:var(--tint)}
+/* quick contact under the form */
+.quick{margin-top:28px;display:flex;flex-wrap:wrap;align-items:center;gap:10px 28px;font-size:16px}
+.quick .mono{color:var(--soft)}
+.quick a{font-weight:600;color:var(--blue);text-decoration:none;overflow-wrap:anywhere}
+.quick a:hover{text-decoration:underline}
+.quick .loc{flex-basis:100%;font-size:14px;color:var(--soft)}
+
+/* contact + footer */
+.contact{background:var(--blue);color:#fff}
+.contact .in{display:flex;flex-wrap:wrap;gap:48px;align-items:center}
+.contact .copy{flex:1 1 400px;min-width:0;display:flex;flex-direction:column;gap:18px}
+.contact .tag b{background:#fff;color:var(--blue)}
+.contact h2{font-size:clamp(40px,6vw,80px);line-height:.98}
+.contact h2 em.it{color:var(--tint-2)}
+.contact .copy p{font-size:19px;max-width:46ch;color:#DCE3FF}
+.card-wrap{flex:1 1 380px;min-width:0;padding:0 8px 8px 0}
+.card{background:#fff;color:var(--ink);border:1px solid var(--bd);border-radius:28px;box-shadow:var(--shadow);padding:28px;display:flex;flex-direction:column}
+.card .r{display:flex;flex-direction:column;gap:2px;padding:16px 0;border-top:1px solid var(--line)}
+.card .r:first-child{border-top:0;padding-top:0}
+.card .r:last-child{padding-bottom:0}
+.card .k{font:500 12px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--soft)}
+.card a,.card .v{font:700 21px/1.25 var(--disp);color:var(--blue);text-decoration:none;overflow-wrap:anywhere}
+.card a:hover{text-decoration:underline}
+.card a.sm{font-size:17px}
+.card .v.plain{color:var(--ink);font-size:18px}
+footer{background:var(--ink);color:var(--on-navy)}
+.foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 32px;padding-block:28px}
+.foot b{font:700 22px var(--disp);color:#fff}.foot b i{font-style:normal;font-weight:500}
+.foot span{font-size:14px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top" aria-label="SR Deutsch, home">
+      <svg viewBox="0 0 38 38" aria-hidden="true"><circle cx="13" cy="13" r="12" fill="#3567D0"/><rect x="19" y="19" width="17" height="17" rx="5" fill="#9DBBEF"/></svg>
+      <span>SR <i>Deutsch</i></span>
+    </a>
+    <nav aria-label="Main">
+      <a class="l hide-sm" href="#finder">Find a course</a>
+      <a class="l hide-sm" href="#conversation">Conversation</a>
+      <a class="l hide-sm" href="#academic">Academic</a>
+      <a class="l hide-sm" href="#about">About</a>
+      <a class="l hide-sm" href="#faq">FAQ</a>
+      <a class="btn sm" href="#register" data-book="assess">Book now <span class="arr" aria-hidden="true">→</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-copy">
+      <div class="hello"><i></i>Private &amp; small-group German · online worldwide</div>
+      <h1>Speak German <em class="it">like you mean it.</em></h1>
+      <p class="hero-sub">Conversation courses that get you talking from lesson one, and focused exam preparation for Goethe and telc. Taught by Sohaila Ragab, with eight years of German behind every lesson.</p>
+      <div class="cta">
+        <a class="btn blue" href="#register" data-book="assess">Book a level assessment <span class="arr" aria-hidden="true">→</span></a>
+        <a class="btn white" href="#finder">Find my course <span class="arr" aria-hidden="true">↓</span></a>
+      </div>
+      <div class="trust"><span>A1–C1</span><span>500+ learners trained</span><span>Reply within one working day</span></div>
+    </div>
+    <div class="collage" aria-hidden="true">
+      <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+      <div class="bubble q1">Wie geht’s dir?<small>How are you?</small></div>
+      <div class="bubble q2">Ich hätte gern einen Kaffee.<small>I would like a coffee.</small></div>
+      <div class="bubble q3">Genau, das klingt super!<small>Exactly, that sounds great!</small></div>
+      <div class="stamp"><div>Sprich<br>mit!<small>Speak up</small></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FINDER -->
+<section class="sec" id="finder">
+  <div class="wrap">
+    <div class="head">
+      <div class="tag">Find your course</div>
+      <h2>Two choices, <em class="it">one clear answer.</em></h2>
+      <p class="lead">Tell us your goal and how you like to learn. The card shows what you get, and you can book right away.</p>
+    </div>
+    <div class="finder">
+      <div class="controls">
+        <div class="group">
+          <div class="mono">1 · My goal</div>
+          <div class="opts">
+            <button type="button" class="opt" data-goal="conversation">Speak with confidence</button>
+            <button type="button" class="opt" data-goal="academic">Pass an exam</button>
+          </div>
+        </div>
+        <div class="group">
+          <div class="mono">2 · My format</div>
+          <div class="opts">
+            <button type="button" class="opt" data-fmtpick="private">Private</button>
+            <button type="button" class="opt" data-fmtpick="group">Small group</button>
+          </div>
+        </div>
+        <p class="hint">Not sure? <a href="#register" data-book="assess">Book a 30-minute assessment</a> and we decide together.</p>
+      </div>
+      <div class="result" aria-live="polite">
+        <div class="mono" style="color:var(--blue)" id="rTag"></div>
+        <h3 id="rTitle"></h3>
+        <p id="rText"></p>
+        <ul class="pts" id="rPoints"></ul>
+        <div class="meta">
+          <div><span class="mono">Rhythm</span><strong id="rRhythm"></strong></div>
+          <div><span class="mono">Price</span><strong id="rPrice"></strong></div>
+        </div>
+        <a class="btn" id="rBook" href="#register" data-book="conversation" data-fmt="group">Book this course <span class="arr" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONVERSATION CORNER -->
+<section class="sec corner conv" id="conversation">
+  <div class="wrap">
+    <div class="head">
+      <div class="tag">Conversation corner</div>
+      <h2>Conversational German, <em class="it">in detail.</em></h2>
+      <p class="lead">For learners who understand more than they can say, or who want to start speaking without fear. You do most of the talking. Topics come from your own life.</p>
+    </div>
+
+    <div class="facts">
+      <div class="fact"><span class="n">1</span><h3>Who it is for</h3><p>Beginners to advanced learners (A1–C1) who want to speak, live, work or study in German-speaking settings, or simply feel at ease with the language.</p></div>
+      <div class="fact"><span class="n">2</span><h3>What you work on</h3><p>Vocabulary range, grammar in speech, sentence building, flow, pronunciation and the habit of thinking in German instead of translating.</p></div>
+      <div class="fact"><span class="n">3</span><h3>What changes</h3><p>You answer faster, recover when you get stuck, ask for clarification in German and handle everyday and work situations with confidence.</p></div>
+    </div>
+
+    <div class="two">
+      <div class="panel">
+        <div class="sub">A typical session</div>
+        <h3>How a lesson runs</h3>
+        <ol class="flow">
+          <li><time>Warm-up</time><div><b>Talk about your week</b><span>Easy start in German, at your level.</span></div></li>
+          <li><time>Topic</time><div><b>A real situation</b><span>A flat viewing, a job interview, a doctor’s visit, a chat with colleagues.</span></div></li>
+          <li><time>Fix</time><div><b>Live correction</b><span>Grammar, word choice and pronunciation: sounds, rhythm and intonation.</span></div></li>
+          <li><time>Recap</time><div><b>Take-away list</b><span>The new words and structures you actually used.</span></div></li>
+        </ol>
+      </div>
+      <div class="panel">
+        <div class="sub">Choose your format</div>
+        <h3>Private or small group</h3>
+        <div class="fmt-cards">
+          <div class="fmt">
+            <h4>Private</h4>
+            <p>Fully tailored to you. Flexible schedule, fastest progress.</p>
+            <div class="price">[PRICE] per session</div>
+            <a class="btn sm" href="#register" data-book="conversation" data-fmt="private">Book private <span class="arr" aria-hidden="true">→</span></a>
+          </div>
+          <div class="fmt">
+            <h4>Small group</h4>
+            <p>Fixed weekly slot, learners at a similar level, lower cost per lesson.</p>
+            <div class="price">[PRICE] per month</div>
+            <a class="btn sm coral" href="#register" data-book="conversation" data-fmt="group">Book group <span class="arr" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ACADEMIC CORNER -->
+<section class="sec corner acad" id="academic">
+  <div class="wrap">
+    <div class="head">
+      <div class="tag">Academic corner</div>
+      <h2>Exam preparation, <em class="it">in detail.</em></h2>
+      <p class="lead">For learners with a Goethe or telc exam ahead. We plan backwards from your exam date and spend lesson time where it raises your result.</p>
+    </div>
+
+    <div class="facts">
+      <div class="fact"><span class="n">1</span><h3>Who it is for</h3><p>Learners preparing for Goethe or telc exams for study, work, residence or personal goals, at the level they are aiming for.</p></div>
+      <div class="fact"><span class="n">2</span><h3>What you work on</h3><p>Speaking tasks in exam format, plus the vocabulary, grammar and strategy that exam tasks reward, with timed practice.</p></div>
+      <div class="fact"><span class="n">3</span><h3>What you get</h3><p>A clear plan, mock tests with detailed feedback and a realistic view of where you stand before exam day.</p></div>
+    </div>
+
+    <div class="two">
+      <div class="panel">
+        <div class="sub">The four skills</div>
+        <h3>Where the focus goes</h3>
+        <div class="skills">
+          <div class="focus"><b>Sprechen</b><span>Speaking: our strongest focus, rehearsed in exam format.</span></div>
+          <div><b>Hören</b><span>Listening: strategy and timed practice.</span></div>
+          <div><b>Lesen</b><span>Reading: task types and time management.</span></div>
+          <div><b>Schreiben</b><span>Writing: structure and the vocabulary exams reward.</span></div>
+        </div>
+        <div class="disclaimer">Independent preparation. SR Deutsch is not affiliated with the Goethe-Institut or telc and is not an official examiner. Your exam is taken at an official exam centre.</div>
+      </div>
+      <div class="panel">
+        <div class="sub">The plan</div>
+        <h3>Three phases to exam day</h3>
+        <ol class="flow">
+          <li><time>Phase 1</time><div><b>Diagnose</b><span>An assessment shows your level and weakest areas. We set priorities and a timeline.</span></div></li>
+          <li><time>Phase 2</time><div><b>Train</b><span>Skill-by-skill practice, with exam-style speaking prompts every week.</span></div></li>
+          <li><time>Phase 3</time><div><b>Mock &amp; polish</b><span>Timed mock tests with feedback, then a final push on the details.</span></div></li>
+        </ol>
+        <div class="fmt-cards" style="margin-top:6px">
+          <div class="fmt">
+            <h4>Private</h4>
+            <div class="price">[PRICE] per lesson</div>
+            <a class="btn sm blue on-navy" href="#register" data-book="academic" data-fmt="private">Book private <span class="arr" aria-hidden="true">→</span></a>
+          </div>
+          <div class="fmt">
+            <h4>Small group</h4>
+            <div class="price">[PRICE] per month</div>
+            <a class="btn sm" href="#register" data-book="academic" data-fmt="group">Book group <span class="arr" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ASSESSMENT -->
+<section class="sec assess" id="assessment">
+  <div class="wrap">
+    <div class="head">
+      <div class="tag">Not sure where to start?</div>
+      <h2>Find your level in <em class="it">30 minutes of talking.</em></h2>
+      <p class="lead">No written test, and no level assigned before you speak. We have a conversation, then you know where you stand and what to do next.</p>
+    </div>
+    <div class="look">
+      <div class="mono">What I listen for</div>
+      <div class="chips"><span class="chip">Vocabulary range</span><span class="chip">Grammar in speech</span><span class="chip">Sentence building</span><span class="chip">Thinking in German</span><span class="chip">Flow</span><span class="chip">Understanding the question</span><span class="chip">Asking for clarification</span></div>
+      <div class="mono" style="margin-top:20px">Levels I assess</div>
+      <div class="chips"><span class="chip lv">A1</span><span class="chip lv">A2</span><span class="chip lv">B1</span><span class="chip lv">B2</span><span class="chip lv">C1</span></div>
+    </div>
+    <div class="leave">
+      <h3>You leave with</h3>
+      <ul><li>Spoken feedback at the end of the call</li><li>A written message with your corrected errors</li><li>Guidance on where to start and what comes next</li></ul>
+      <div class="row"><a class="btn white" href="#register" data-book="assess">Book an assessment <span class="arr" aria-hidden="true">→</span></a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="sec" id="about" style="background:var(--mist);border-block:1px solid var(--bd)">
+  <div class="wrap about">
+    <div class="photo-col">
+      <!-- To add your photo: replace the <span> below with <img src="your-photo.jpg" alt="Sohaila Ragab Khalil"> -->
+      <div class="photo"><i></i><u></u><span>[ADD YOUR PHOTO]</span></div>
+    </div>
+    <div class="about-copy">
+      <div class="tag">Your trainer</div>
+      <h2>Sohaila <em class="it">Ragab Khalil</em></h2>
+      <div class="role">German Language &amp; Communication Specialist</div>
+      <p class="lead">Eight years with German, from academic study to assessing how others speak it. Five years of training, assessing and coaching trainers, starting in the final year of study.</p>
+      <dl class="kv">
+        <div><dt>Education</dt><dd>BA European Languages &amp; Literature (German), Al-Azhar University, 2018–2022</dd></div>
+        <div><dt>Experience</dt><dd>Gib Gas, a German language institute in Egypt: Conversation Trainer (2021 to now), Supervisor &amp; Coach (2022 to now), Assessment &amp; Placement (2023 to now)</dd></div>
+        <div><dt>Languages</dt><dd>Arabic (native), German (C1), English (B2), Turkish (A2)</dd></div>
+        <div><dt>Volunteering</dt><dd>“Ich spiele Deutsch”, teaching German to beginners (2023)</dd></div>
+      </dl>
+      <div class="chips" aria-label="Also offered"><span class="chip">Trainer coaching</span><span class="chip">Curriculum and materials</span><span class="chip">German–Arabic translation</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec" id="faq">
+  <div class="wrap">
+    <div class="head">
+      <div class="tag">FAQ</div>
+      <h2>Questions, <em class="it">answered.</em></h2>
+    </div>
+    <div class="faq">
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <details><summary>I don’t know my level. Where do I start?</summary><p>Book an assessment: a 30-minute spoken conversation. You get feedback right after, plus a written message with your corrected errors and where to start.</p></details>
+        <details><summary>Do you prepare students for Goethe and telc exams?</summary><p>Yes, in the academic path, with speaking practice at the center. SR Deutsch is independent: not affiliated with the Goethe-Institut or telc, and not an official examiner.</p></details>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <details><summary>Which is better, private or group?</summary><p>Private is faster and fully tailored to you, with a flexible schedule. A group costs less per lesson, meets at a fixed weekly time and gives you people to speak with.</p></details>
+        <details><summary>Are lessons online or in person?</summary><p>Online worldwide. On-site sessions are available across Beheira, Egypt.</p></details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REGISTER -->
+<section class="sec register" id="register">
+  <div class="wrap">
+    <div class="head">
+      <div class="tag">Register &amp; book</div>
+      <h2>Send your request <em class="it">in one minute.</em></h2>
+      <p class="lead">Fill in the form and a ready WhatsApp message to your trainer opens with your details. You decide when to press send.</p>
+    </div>
+    <div style="padding:0 8px 8px 0">
+      <form class="reg" id="regForm">
+        <fieldset style="border:0;margin:0;padding:0;min-width:0">
+          <legend class="sr" style="font:500 12px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--soft);padding:0 0 12px">I want to</legend>
+          <div class="pick">
+            <label><input type="radio" name="req" value="Book a level assessment" checked><b>Level assessment</b><span>30-minute conversation</span></label>
+            <label><input type="radio" name="req" value="Register for a Conversation course"><b>Conversation course</b><span>Speak with confidence</span></label>
+            <label><input type="radio" name="req" value="Register for an Academic course"><b>Academic course</b><span>Goethe and telc preparation</span></label>
+            <label><input type="radio" name="req" value="Ask a question"><b>Ask a question</b><span>I need more information</span></label>
+          </div>
+        </fieldset>
+        <div class="grid">
+          <div class="fld"><label for="fName">Your name</label><input id="fName" name="name" type="text" autocomplete="name" required></div>
+          <div class="fld"><label for="fPhone">WhatsApp number</label><input id="fPhone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+20 …" required></div>
+          <div class="fld"><label for="fFmt">Format</label>
+            <select id="fFmt" name="fmt"><option>Private</option><option>Small group</option><option>Not sure yet</option></select></div>
+          <div class="fld"><label for="fLevel">My level</label>
+            <select id="fLevel" name="level"><option>I don’t know</option><option>A1</option><option>A2</option><option>B1</option><option>B2</option><option>C1</option></select></div>
+          <div class="fld"><label for="fExam">Exam (if any)</label>
+            <select id="fExam" name="exam"><option>No exam</option><option>Goethe</option><option>telc</option><option>Other</option></select></div>
+          <div class="fld"><label for="fCountry">Country and time zone</label><input id="fCountry" name="country" type="text" autocomplete="country-name" placeholder="e.g. Egypt, Cairo time"></div>
+          <div class="fld wide"><label for="fWhen">Preferred days and times</label><textarea id="fWhen" name="when" rows="2" placeholder="e.g. Sunday and Tuesday evenings"></textarea></div>
+          <div class="fld wide"><label for="fNotes">Anything else?</label><textarea id="fNotes" name="notes" rows="3"></textarea></div>
+        </div>
+        <div class="reg-actions">
+          <button type="submit" class="btn blue">Open WhatsApp with my message <span class="arr" aria-hidden="true">→</span></button>
+          <p class="reg-note">Nothing is stored on this site. Your details travel only in the message you send.</p>
+        </div>
+        <div class="out" id="out" hidden>
+          <p>Your message is ready. If WhatsApp did not open, use one of these:</p>
+          <textarea id="msg" readonly aria-label="Your message"></textarea>
+          <div class="row">
+            <a id="wa" class="btn sm blue" target="_blank" rel="noopener" href="#register">Open WhatsApp <span class="arr" aria-hidden="true">→</span></a>
+            <a id="mail" class="btn sm white" href="#register">Send by email <span class="arr" aria-hidden="true">→</span></a>
+            <button type="button" id="copy" class="btn sm white">Copy message <span class="arr" aria-hidden="true">⧉</span></button>
+          </div>
+        </div>
+      </form>
+      <div class="quick">
+        <span class="mono">Prefer to write directly?</span>
+        <a href="https://wa.me/201039191063" rel="noopener">WhatsApp +20 103 919 1063</a>
+        <a href="mailto:sprechreise@gmail.com">sprechreise@gmail.com</a>
+        <a href="https://www.linkedin.com/in/sohaila-ragab-3592161b7" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://sohaila-ragab.github.io/SohilaRagab/" target="_blank" rel="noopener">Portfolio &amp; CV</a>
+        <span class="loc">Beheira, Egypt · online worldwide · reply within one working day</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <b>SR <i>Deutsch</i></b>
+    <span>© 2026 Sohaila Ragab · SR Deutsch</span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  function $(id) { return document.getElementById(id); }
+
+  /* Every "Book" button preselects the matching option in the form. */
+  var reqMap = {
+    assess: 'Book a level assessment',
+    conversation: 'Register for a Conversation course',
+    academic: 'Register for an Academic course'
+  };
+  var fmtMap = { private: 'Private', group: 'Small group' };
+
+  document.querySelectorAll('[data-book]').forEach(function (a) {
+    a.addEventListener('click', function () {
+      var kind = a.getAttribute('data-book');
+      var radios = document.querySelectorAll('input[name="req"]');
+      radios.forEach(function (r) { r.checked = (r.value === reqMap[kind]); });
+      var f = a.getAttribute('data-fmt');
+      if (f) $('fFmt').value = fmtMap[f];
+      if (kind === 'academic' && $('fExam').value === 'No exam') $('fExam').value = 'Goethe';
+      if (kind !== 'academic') $('fExam').value = 'No exam';
+    });
+  });
+
+
+  /* Course finder */
+  var PLANS = {
+    'conversation-private': { tag: 'Conversation · Private', title: 'Private speaking sessions',
+      text: 'You do most of the talking. Topics come from your own life and work, and every session is matched to your CEFR level.',
+      points: ['Live correction of grammar and pronunciation', 'Practice thinking in German instead of translating', 'Real situations: daily life, work, interviews'],
+      rhythm: 'Flexible, agreed with your trainer', price: '[PRICE] per session' },
+    'conversation-group': { tag: 'Conversation · Small group', title: 'Conversation circle',
+      text: 'Structured weekly speaking practice with learners at a similar level. You speak, you get corrected, and you hear how others solve the same problems.',
+      points: ['Weekly speaking practice at your level', 'Live correction while you speak', 'Pronunciation: sounds, rhythm, intonation'],
+      rhythm: 'Fixed weekly slot', price: '[PRICE] per month' },
+    'academic-private': { tag: 'Academic · Private', title: 'One-to-one exam coaching',
+      text: 'A plan built around your exam, your date and your weakest part. Every lesson goes to what raises your result.',
+      points: ['A diagnostic first, then clear priorities', 'Speaking tasks rehearsed in exam format', 'Mock tests with detailed feedback'],
+      rhythm: 'Flexible, agreed with your trainer', price: '[PRICE] per lesson' },
+    'academic-group': { tag: 'Academic · Small group', title: 'Exam preparation group',
+      text: 'A structured route to your Goethe or telc exam, with weekly practice and partners to rehearse with.',
+      points: ['Fixed weekly lessons in a small group', 'Exam-style speaking tasks, rehearsed together', 'A mock test before your exam date'],
+      rhythm: 'Fixed weekly slot', price: '[PRICE] per month' }
+  };
+  var goal = 'conversation', pick = 'group';
+  function renderFinder() {
+    var p = PLANS[goal + '-' + pick];
+    $('rTag').textContent = p.tag;
+    $('rTitle').textContent = p.title;
+    $('rText').textContent = p.text;
+    $('rPoints').innerHTML = p.points.map(function (t) { return '<li>' + t + '</li>'; }).join('');
+    $('rRhythm').textContent = p.rhythm;
+    $('rPrice').textContent = p.price;
+    $('rBook').setAttribute('data-book', goal);
+    $('rBook').setAttribute('data-fmt', pick);
+    document.querySelectorAll('[data-goal]').forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-goal') === goal)); });
+    document.querySelectorAll('[data-fmtpick]').forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-fmtpick') === pick)); });
+  }
+  document.querySelectorAll('[data-goal]').forEach(function (b) { b.addEventListener('click', function () { goal = b.getAttribute('data-goal'); renderFinder(); }); });
+  document.querySelectorAll('[data-fmtpick]').forEach(function (b) { b.addEventListener('click', function () { pick = b.getAttribute('data-fmtpick'); renderFinder(); }); });
+  renderFinder();
+
+  /* The form builds a WhatsApp / email message. Nothing is stored. */
+  function val(id) { return $(id).value.trim(); }
+  $('regForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var req = document.querySelector('input[name="req"]:checked').value;
+    var lines = [
+      'Hello, I am contacting you through the SR Deutsch website.',
+      'I want to: ' + req,
+      'Name: ' + val('fName'),
+      'WhatsApp: ' + val('fPhone'),
+      'Format: ' + val('fFmt'),
+      'My level: ' + val('fLevel'),
+      'Exam: ' + val('fExam')
+    ];
+    if (val('fWhen')) lines.push('Preferred days and times: ' + val('fWhen'));
+    if (val('fCountry')) lines.push('Country and time zone: ' + val('fCountry'));
+    if (val('fNotes')) lines.push('Notes: ' + val('fNotes'));
+    var msg = lines.join('\n');
+
+    var wa = 'https://wa.me/201039191063?text=' + encodeURIComponent(msg);
+    var mail = 'mailto:sprechreise@gmail.com?subject=' + encodeURIComponent('SR Deutsch: ' + req) + '&body=' + encodeURIComponent(msg);
+
+    $('msg').value = msg;
+    $('wa').href = wa;
+    $('mail').href = mail;
+    $('out').hidden = false;
+    $('out').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    window.open(wa, '_blank', 'noopener');
+  });
+
+  $('copy').addEventListener('click', function () {
+    var t = $('msg'), btn = $('copy');
+    var label = 'Copy message <span class="arr" aria-hidden="true">⧉</span>';
+    function done() {
+      btn.innerHTML = 'Copied <span class="arr" aria-hidden="true">✓</span>';
+      setTimeout(function () { btn.innerHTML = label; }, 1800);
+    }
+    function fallback() {
+      t.focus(); t.select();
+      try { if (document.execCommand('copy')) done(); } catch (err) {}
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(t.value).then(done, fallback);
+    } else { fallback(); }
+  });
+})();
+</script>
+</body>
+</html>
